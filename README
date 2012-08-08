@@ -15,3 +15,8 @@ And in Vim run:
 
 BundleInstall
 
+
+Leader key is ','
+
+
+Shortcut to NERDTreeToggle is ',+nt'
