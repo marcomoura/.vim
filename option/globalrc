@@ -1,0 +1,5 @@
+
+" nerdtree fix
+let g:NERDTreeDirArrows=0
+
+syntax on
