@@ -7,3 +7,11 @@ Is a git submodule, to install run:
 - git submodule update
 
 
+Add plugins in option/vundlerc
+
+
+
+And in Vim run:
+
+BundleInstall
+
