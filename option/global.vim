@@ -19,7 +19,9 @@ set ruler               " line and column number of the cursor position
 set wildmenu            " enhanced command completion
 set list
 
-
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " behavior
                         " ignore these files when completing names and in
