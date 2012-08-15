@@ -19,4 +19,11 @@ BundleInstall
 Leader key is ','
 
 
-Shortcut to NERDTreeToggle is ',+nt'
+Shortcuts
+
+',+nt' > NERDTreeToggle 
+',+/' > silent nohlsearch
+',+e' > open file name auto complete
+
+
+
