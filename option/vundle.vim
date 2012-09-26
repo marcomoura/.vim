@@ -17,6 +17,8 @@ Bundle 'vim-ruby/vim-ruby.git'
 
 Bundle 'scrooloose/nerdtree.git'
 
+Bundle 'jg/bufexplorer.git'
+
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
