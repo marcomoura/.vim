@@ -13,15 +13,17 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-endwise.git'
 Bundle 'vim-ruby/vim-ruby.git'
+
+Bundle 'tpope/vim-markdown.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-cucumber.git'
 
 Bundle 'scrooloose/nerdtree.git'
 
 Bundle 'jg/bufexplorer.git'
-
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Bundle 'kien/ctrlp.vim.git'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
