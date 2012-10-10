@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'vim-ruby/vim-ruby.git'
+Bundle 'scrooloose/syntastic.git'
 
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-surround.git'
@@ -24,6 +25,9 @@ Bundle 'scrooloose/nerdtree.git'
 
 Bundle 'jg/bufexplorer.git'
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'mileszs/ack.vim.git'
+Bundle 'ddollar/nerdcommenter.git'
+
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...

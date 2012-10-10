@@ -53,3 +53,4 @@ set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
 
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
