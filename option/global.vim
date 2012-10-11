@@ -54,3 +54,29 @@ set foldlevel=9
 set nofoldenable        "dont fold by default "
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" show status line all the time
+set laststatus=2
+
+
+" Useful status information at bottom of screen
+" "set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}\
+" %{exists('g:loaded_rvm')?rvm#statusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
+" "statusline setup
+set statusline=%f " tail of the filename
+set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, " file encoding
+set statusline+=\ %{&ff}] " file format
+set statusline+=\ %r " Opened type (read-only)
+set statusline+=\ %m " Modify?
+set statusline+=\ %y " File type (vim, php, ruby)
+set statusline+=\ %{fugitive#statusline()} " Git
+set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''} " RVM
+set statusline+=%= " left/right separator
+set statusline+=%c, " cursor column
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P " percent through file
+
+" Warning syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
