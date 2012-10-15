@@ -23,7 +23,7 @@ Bundle 'tpope/vim-cucumber.git'
 
 Bundle 'scrooloose/nerdtree.git'
 
-Bundle 'jg/bufexplorer.git'
+Bundle 'vim-scripts/bufexplorer.zip.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
