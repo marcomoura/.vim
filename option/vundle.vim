@@ -28,9 +28,6 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
 
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
 
 filetype plugin indent on     " required!
 "
