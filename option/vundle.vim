@@ -20,15 +20,17 @@ Bundle 'bbommarito/vim-slim.git'
 
 
 Bundle 'tpope/vim-markdown.git'
-Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-cucumber.git'
+Bundle 'tsaleh/vim-matchit.git'
 
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'vim-scripts/Auto-Pairs.git'
 
 Bundle 'vim-scripts/bufexplorer.zip.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
+Bundle 'vim-scripts/AutoTag.git'
 
 
 filetype plugin indent on     " required!
