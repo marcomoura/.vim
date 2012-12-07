@@ -26,7 +26,7 @@ Bundle 'tsaleh/vim-matchit.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'vim-scripts/Auto-Pairs.git'
 
-Bundle 'vim-scripts/bufexplorer.zip.git'
+Bundle 'rgarver/Kwbd.vim.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
