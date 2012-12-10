@@ -24,6 +24,7 @@ Bundle 'tpope/vim-cucumber.git'
 Bundle 'tsaleh/vim-matchit.git'
 
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'widox/vim-buffer-explorer-plugin.git'
 Bundle 'vim-scripts/Auto-Pairs.git'
 
 Bundle 'rgarver/Kwbd.vim.git'
