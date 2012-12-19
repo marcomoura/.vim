@@ -4,6 +4,9 @@ let g:NERDTreeDirArrows=0
 
 syntax on
 
+" switch buffers without save
+set hidden
+
 " prevent vim from adding that stupid empty line at the end of every file
 set noeol
 set binary
@@ -80,3 +83,11 @@ set statusline+=\ %P " percent through file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+
+
+map <F5> :ScreenShellVertical<CR>
+command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
+map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
+map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
+map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
