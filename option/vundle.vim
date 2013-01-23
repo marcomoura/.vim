@@ -17,6 +17,7 @@ Bundle 'tpope/vim-endwise.git'
 Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'bbommarito/vim-slim.git'
+Bundle 'vim-scripts/vim-coffee-script.git'
 
 
 Bundle 'tpope/vim-markdown.git'
