@@ -25,5 +25,6 @@ Shortcuts
 ',+/' > silent nohlsearch
 ',+e' > open file name auto complete
 
-
+'ctrl+p' > find and open files (in VIEW mode)
+'ctrl+p' > show autocomplete (in INSERT mode)
 
