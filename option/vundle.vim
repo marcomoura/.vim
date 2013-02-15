@@ -27,6 +27,8 @@ Bundle 'tsaleh/vim-matchit.git'
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'widox/vim-buffer-explorer-plugin.git'
+
+"plugin to auto complete single quote, double quote, parentheses"
 Bundle 'vim-scripts/Auto-Pairs.git'
 
 Bundle 'rgarver/Kwbd.vim.git'
@@ -34,6 +36,7 @@ Bundle 'kien/ctrlp.vim.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
 Bundle 'vim-scripts/AutoTag.git'
+Bundle 'vim-scripts/closetag.vim.git'
 
 
 filetype plugin indent on     " required!
