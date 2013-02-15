@@ -1,3 +1,5 @@
+" trailing whitespace will be highlighted automatically
+match ErrorMsg '\s\+$'
 
 " nerdtree fix
 let g:NERDTreeDirArrows=0
@@ -91,3 +93,5 @@ command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."'
 map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
 map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
 map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
+
+
