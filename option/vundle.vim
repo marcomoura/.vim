@@ -21,6 +21,13 @@ Bundle 'vim-scripts/vim-coffee-script.git'
 Bundle 'rodjek/vim-puppet.git'
 
 
+" dependencies to snipmante
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle "garbas/vim-snipmate"
+
+Bundle 'vim-scripts/csv.vim.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-cucumber.git'
 Bundle 'tsaleh/vim-matchit.git'
