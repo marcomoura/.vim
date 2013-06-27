@@ -1,9 +1,6 @@
 " trailing whitespace will be highlighted automatically
 match ErrorMsg '\s\+$'
 
-" nerdtree fix
-let g:NERDTreeDirArrows=0
-
 syntax on
 
 " switch buffers without save
@@ -85,3 +82,7 @@ set statusline+=\ %P " percent through file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" nerdtree fix
+let g:NERDTreeDirArrows=0
+
