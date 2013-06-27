@@ -1,7 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -16,7 +16,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'scrooloose/syntastic.git'
-Bundle 'bbommarito/vim-slim.git'
+Bundle 'slim-template/vim-slim.git'
 Bundle 'vim-scripts/vim-coffee-script.git'
 Bundle 'rodjek/vim-puppet.git'
 
@@ -24,7 +24,7 @@ Bundle 'rodjek/vim-puppet.git'
 " dependencies to snipmante
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle "honza/vim-snippets"
 Bundle "garbas/vim-snipmate"
 
 Bundle 'vim-scripts/csv.vim.git'

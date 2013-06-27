@@ -1,12 +1,13 @@
-Install vim-nox and ack-grep
+# Install vim-nox and ack-grep
 
-sudo apt-get install vim-nox ack-grep
+- sudo apt-get install vim-nox ack-grep
 
-make a symlink in home to
+# Make a symlink in home to vimrc
 
-ln -s .vim/vimrc .vimrc
+- cd to ~/
+- ln -s .vim/vimrc .vimrc
 
-# Vundle 
+# Install Vundle
 
 Is a git submodule, to install run:
 
@@ -15,14 +16,17 @@ Is a git submodule, to install run:
 - git submodule update
 - vim +BundleInstall +qall
 
-Add plugins in option/vundlerc
+# Add plugins in option/vundle.vim
 
 
+*******************************
+*******************************
 
-Leader key is ','
+# Configurations
 
+- Leader key is ','
 
-Shortcuts
+# Shortcuts
 
 ',+nt' > NERDTreeToggle 
 ',+/' > silent nohlsearch
@@ -30,4 +34,3 @@ Shortcuts
 
 'ctrl+p' > find and open files (in VIEW mode)
 'ctrl+p' > show autocomplete (in INSERT mode)
-
