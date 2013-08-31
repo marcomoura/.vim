@@ -1,6 +1,12 @@
 " trailing whitespace will be highlighted automatically
 match ErrorMsg '\s\+$'
 
+" to not leave trailing whitespaces or line endings
+autocmd BufWritePre * :%s/\s\+$//e
+
+" nerdtree fix
+let g:NERDTreeDirArrows=0
+
 syntax on
 
 " switch buffers without save

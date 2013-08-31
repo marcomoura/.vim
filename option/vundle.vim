@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -44,6 +44,7 @@ Bundle 'mileszs/ack.vim.git'
 Bundle 'ddollar/nerdcommenter.git'
 Bundle 'vim-scripts/AutoTag.git'
 Bundle 'vim-scripts/closetag.vim.git'
+Bundle 'godlygeek/tabular.git'
 
 
 filetype plugin indent on     " required!
