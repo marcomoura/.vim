@@ -1,7 +1,7 @@
 " trailing whitespace will be highlighted automatically
 match ErrorMsg '\s\+$'
 
-" to not leave trailing whitespaces or line endings
+" auto remove trailing whitespaces or line endings
 autocmd BufWritePre * :%s/\s\+$//e
 
 " nerdtree fix
@@ -27,18 +27,16 @@ set ruler               " line and column number of the cursor position
 set wildmenu            " enhanced command completion
 set list
 
+" Tab size and indentation: Use 2 spaces instead of hard tabs for indentation.
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set autoindent          " automatically indent new line
 
 " behavior
-                        " ignore these files when completing names and in
-
+" ignore these files when completing names and in
 
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
-
-
-set autoindent          " automatically indent new line
 
 " search settings
 set incsearch           " Incremental search
@@ -89,6 +87,4 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" nerdtree fix
-let g:NERDTreeDirArrows=0
-
+set viminfo+=n~/.vim/viminfo
