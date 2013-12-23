@@ -88,3 +88,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set viminfo+=n~/.vim/viminfo
+
+"regenerate ctags
+map <Leader>ct :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
