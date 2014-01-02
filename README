@@ -14,6 +14,8 @@ Is a git submodule, to install run:
 - cd to ~/.vim
 - git submodule init
 - git submodule update
+- mkdir bundle
+- move vundle bundle/vundle
 - vim +BundleInstall +qall
 
 # Add plugins in option/vundle.vim
@@ -28,7 +30,7 @@ Is a git submodule, to install run:
 
 # Shortcuts
 
-',+nt' > NERDTreeToggle 
+',+nt' > NERDTreeToggle
 ',+/' > silent nohlsearch
 ',+e' > open file name auto complete
 
