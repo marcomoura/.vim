@@ -45,7 +45,12 @@ Bundle 'ddollar/nerdcommenter.git'
 Bundle 'vim-scripts/AutoTag.git'
 Bundle 'vim-scripts/closetag.vim.git'
 Bundle 'godlygeek/tabular.git'
+Bundle 'Valloric/YouCompleteMe'
 
+Bundle 'pbrisbin/alt-ctags'
+
+" color
+Bundle 'altercation/vim-colors-solarized.git'
 
 filetype plugin indent on     " required!
 "
