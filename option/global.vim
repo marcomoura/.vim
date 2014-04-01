@@ -5,9 +5,16 @@ match ErrorMsg '\s\+$'
 autocmd BufWritePre * :%s/\s\+$//e
 
 " nerdtree fix
-let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrows=1
 
 syntax on
+
+" color scheme
+set term=xterm-256color
+let g:solarized_termcolors=256
+set background=dark
+" let g:solarized_termtrans = 1
+colorscheme solarized
 
 " switch buffers without save
 set hidden
@@ -89,5 +96,29 @@ set statusline+=%*
 
 set viminfo+=n~/.vim/viminfo
 
-"regenerate ctags
-map <Leader>ct :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
+let g:ctags_file = '.git/tags'
+let g:ctags_command = "ctags --tag-relative -f '%f' -R --exclude='.git'"
+let g:ctags_excludes = [ '~', '~/code/dotfiles'  ]"
+
+
+" Ctrlp - Vimscript fuzzy file opener
+
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
+" Allow opening mutlipe splits with same file via CtrlP
+let g:ctrlp_switch_buffer = 0
+
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_mruf_default_order = 1
+let g:ctrlp_max_height = 45
+let g:ctrlp_max_files = 300
+let g:ctrlp_max_depth = 99
+let g:ctrlp_prompt_mappings = {
+\ 'MarkToOpen()':         ['<c-z>', '<c-x>'],
+\ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>', '<C-@>', '<c-space>'],
+\ }
+
