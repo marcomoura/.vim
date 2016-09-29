@@ -30,7 +30,7 @@ Bundle "garbas/vim-snipmate"
 Bundle 'vim-scripts/csv.vim.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-cucumber.git'
-Bundle 'tsaleh/vim-matchit.git'
+Bundle 'edsono/vim-matchit'
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'widox/vim-buffer-explorer-plugin.git'
@@ -48,6 +48,7 @@ Bundle 'godlygeek/tabular.git'
 Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'pbrisbin/alt-ctags'
+Bundle 'mhinz/vim-startify'
 
 " color
 Bundle 'altercation/vim-colors-solarized.git'
