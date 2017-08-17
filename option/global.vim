@@ -1,3 +1,5 @@
+set nocompatible " be iMproved
+
 " trailing whitespace will be highlighted automatically
 match ErrorMsg '\s\+$'
 
@@ -8,6 +10,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:NERDTreeDirArrows=1
 
 syntax on
+
 
 " color scheme
 set term=xterm-256color
@@ -40,6 +43,16 @@ set shiftwidth=2
 set expandtab
 set autoindent          " automatically indent new line
 
+filetype plugin indent on " Enable filetype-specific indenting and plugins
+"
+augroup myfiletypes
+  " Clear old autocmds in group
+  autocmd!
+  " autoindent with two spaces, always expand tabs
+  autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
+augroup END
+
+
 " behavior
 " ignore these files when completing names and in
 
@@ -59,6 +72,8 @@ set nobackup            " do not write backup files
 set noswapfile          " do not write .swp files
 set undofile
 set undodir=~/.backup/undo/,~/tmp,.
+set viminfo+=n~/.vim/viminfo
+
 
 " folding
 set foldcolumn=0        " columns for folding
@@ -66,8 +81,12 @@ set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 " show status line all the time
 set laststatus=2
 
@@ -93,8 +112,6 @@ set statusline+=\ %P " percent through file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-set viminfo+=n~/.vim/viminfo
 
 let g:ctags_file = '.git/tags'
 let g:ctags_command = "ctags --tag-relative -f '%f' -R --exclude='.git'"

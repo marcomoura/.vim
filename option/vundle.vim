@@ -31,6 +31,7 @@ Bundle 'vim-scripts/csv.vim.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-cucumber.git'
 Bundle 'edsono/vim-matchit'
+Bundle 'ervandew/supertab'
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'widox/vim-buffer-explorer-plugin.git'

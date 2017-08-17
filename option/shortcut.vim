@@ -5,6 +5,9 @@ nmap <leader>nt :NERDTreeToggle<CR>
 " nohlsearch
 nmap <leader>/ :silent noh<CR>
 
+" alternate file (Rails)
+nmap <leader>a :A<CR>
+
 
 nmap <leader>e :e **/
 
@@ -54,3 +57,5 @@ nnoremap <leader>cpt :CtrlPTag<cr>
 " let g:ctrlp_cmd = 'CtrlP =expand("%:p:h")<cr>'
 nnoremap <leader>cpr :CtrlP =system('git rev-parse --show-toplevel')<cr><bs><cr>
 
+map <leader>t :A<CR> " \t to jump to test file
+map <leader>r :r<cr> " \t to jump to related file
