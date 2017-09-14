@@ -11,6 +11,9 @@ let g:NERDTreeDirArrows=1
 
 syntax on
 
+" non-interactive shells do not load their ~/.(bash, zsh, whatever)rc files
+" where RVM is being initialized
+set shellcmdflag=-ic
 
 " color scheme
 set term=xterm-256color
