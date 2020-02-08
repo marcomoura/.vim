@@ -46,14 +46,20 @@ set shiftwidth=2
 set expandtab
 set autoindent          " automatically indent new line
 
+" force vim to use a older version of regex engine and it is actually FASTER for ruby
+set regexpengine=1
+
+set cursorline
+set cursorcolumn
+
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 "
-augroup myfiletypes
-  " Clear old autocmds in group
-  autocmd!
-  " autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
-augroup END
+" augroup myfiletypes
+"   " Clear old autocmds in group
+"   autocmd!
+"   " autoindent with two spaces, always expand tabs
+"   autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
+" augroup END
 
 
 " behavior
@@ -84,14 +90,11 @@ set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
 
-" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-" show status line all the time
-set laststatus=2
+" show status line
+" 0: never
+" 1: only if there are at least two windows
+" 2: always
+set laststatus=1
 
 
 " Useful status information at bottom of screen
@@ -99,13 +102,13 @@ set laststatus=2
 " %{exists('g:loaded_rvm')?rvm#statusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
 " "statusline setup
 set statusline=%f " tail of the filename
-set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, " file encoding
+" set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, " file encoding
 set statusline+=\ %{&ff}] " file format
-set statusline+=\ %r " Opened type (read-only)
-set statusline+=\ %m " Modify?
-set statusline+=\ %y " File type (vim, php, ruby)
+" set statusline+=\ %r " Opened type (read-only)
+" set statusline+=\ %m " Modify?
+" set statusline+=\ %y " File type (vim, php, ruby)
 set statusline+=\ %{fugitive#statusline()} " Git
-set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''} " RVM
+" set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''} " RVM
 set statusline+=%= " left/right separator
 set statusline+=%c, " cursor column
 set statusline+=%l/%L " cursor line/total lines
@@ -116,12 +119,19 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" Ctrlp - Vimscript fuzzy file opener
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 let g:ctags_file = '.git/tags'
 let g:ctags_command = "ctags --tag-relative -f '%f' -R --exclude='.git'"
 let g:ctags_excludes = [ '~', '~/code/dotfiles'  ]"
-
-
-" Ctrlp - Vimscript fuzzy file opener
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
