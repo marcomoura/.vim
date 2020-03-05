@@ -1,4 +1,5 @@
 let mapleader = ","
+"let mapleader = "\<Space>"
 
 nmap <leader>nt :NERDTreeToggle<CR>
 
@@ -24,13 +25,9 @@ inoremap <silent> <C-S>         <C-O>:update<CR>
 "regenerate ctags
 map <Leader>ct :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
+
 " Ruby configurations
 "------------------------
-
-" Convert 1.8 hash syntax to 1.9 syntax
-nmap <leader>19 :%s/:\([^ ]*\)\(\s*\)=>/\1:/gc<cr>
-nmap <leader>18 :%s/\(\w\+\):\s/:\1 => /gc<cr>
-
 nmap <leader>bp orequire 'pry'; binding.pry<esc>^
 
 
@@ -44,9 +41,6 @@ nnoremap <leader>gv :CtrlP app/views<cr>
 nnoremap <leader>gw :CtrlP app/workers<cr>
 nnoremap <leader>gy :CtrlP app/assets/stylesheets<cr>
 nnoremap <leader>go :CtrlP config<cr>
-
-nmap <LEADER>rf :CtrlP ~/.vim/rcfiles<cr>
-nmap <LEADER>rp :CtrlP ~/.vim/rcplugins<cr>
 
 nnoremap <leader>cpt :CtrlPTag<cr>
 

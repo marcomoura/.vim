@@ -6,14 +6,20 @@ match ErrorMsg '\s\+$'
 " auto remove trailing whitespaces or line endings
 autocmd BufWritePre * :%s/\s\+$//e
 
+" nerdtree bookmakr
+autocmd Filetype nerdtree nnoremap <buffer> <leader>b :Bookmark
+
 " nerdtree fix
 let g:NERDTreeDirArrows=1
+let g:NERDTreeShowBookmarks=1
 
 syntax on
 
 " non-interactive shells do not load their ~/.(bash, zsh, whatever)rc files
 " where RVM is being initialized
-set shellcmdflag=-ic
+" remove the -i to not be interactive
+" set shellcmdflag=-ic
+set shellcmdflag=-c
 
 " color scheme
 set term=xterm-256color
@@ -33,7 +39,7 @@ set binary
 set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
-set nowrap              " Do not wrap words (view)
+set wrap                " Do wrap words (view)
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set ruler               " line and column number of the cursor position
@@ -53,6 +59,9 @@ set cursorline
 set cursorcolumn
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
+
+
+
 "
 " augroup myfiletypes
 "   " Clear old autocmds in group
@@ -94,7 +103,7 @@ set nofoldenable        "dont fold by default "
 " 0: never
 " 1: only if there are at least two windows
 " 2: always
-set laststatus=1
+set laststatus=2
 
 
 " Useful status information at bottom of screen
@@ -131,7 +140,7 @@ endif
 
 let g:ctags_file = '.git/tags'
 let g:ctags_command = "ctags --tag-relative -f '%f' -R --exclude='.git'"
-let g:ctags_excludes = [ '~', '~/code/dotfiles'  ]"
+let g:ctags_excludes = [ '~', '~/dotfiles'  ]"
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

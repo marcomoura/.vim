@@ -12,8 +12,8 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-rails.git'
-Bundle 'prophittcorey/vim-flay.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'leroyg/vim-flay'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'sheerun/vim-polyglot'
 
@@ -25,7 +25,7 @@ Bundle "honza/vim-snippets"
 Bundle "garbas/vim-snipmate"
 
 " Bundle 'godlygeek/tabular.git'
-" Bundle 'edsono/vim-matchit'
+Bundle 'adelarsq/vim-matchit'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/closetag.vim.git'
 
